@@ -1,0 +1,171 @@
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:wght@400&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Exo 2", sans-serif;
+}
+
+body {
+  background-color: #ffffff;
+}
+
+.app-container {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.landing-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.hero-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-section {
+  display: flex;
+  margin-bottom: 15px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.logo {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.subtitle {
+  font-size: 18px;
+  max-width: 600px;
+  margin-bottom: 20px;
+  color: #112949;
+  text-align: center;
+  font-weight: 800;
+}
+
+.contact-form {
+  margin: 20px 0;
+}
+
+.form-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input {
+  flex: 1;
+  padding: 12px 16px;
+  font-size: 24px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  outline: none;
+}
+
+input.input-error {
+  border-color: #ff3b30;
+}
+
+.error-message {
+  color: #ff3b30;
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+button {
+  padding: 10px 20px;
+  margin-top: 20px;
+  background-color: #ea7b2c;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 24px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #ea7e35;
+}
+
+button:disabled {
+  background-color: #ffb78c;
+  cursor: not-allowed;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  place-items: center;
+}
+
+.mob-div {
+  display: none;
+}
+.lap-div {
+  display: block;
+}
+
+/* Responsive CSS */
+@media (max-width: 992px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .logo {
+    font-size: 36px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 576px) {
+  .logo-section {
+    flex-direction: column;
+  }
+  .form-group {
+    flex-direction: column;
+  }
+  .lap-div {
+    display: none;
+  }
+  .mob-div {
+    display: block;
+  }
+
+  input {
+    margin-bottom: 10px;
+    width: 100%;
+  }
+
+  button {
+    border-radius: 4px;
+    width: 213px;
+  }
+}
+@media (min-width: 1300px) {
+  .hero-section {
+    flex-direction: row;
+  }
+  input {
+    margin-right: 10px;
+  }
+}
